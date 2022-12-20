@@ -64,7 +64,7 @@ if ARGV.include?("--forward-host")
 end
 
 if ARGV.include?("-u") || ARGV.include?("--unicorn")
-  unicorn_env = { "DISCOURSE_PORT" => ENV["DISCOURSE_PORT"] || "4200" }
+  unicorn_env = { "DISCOURSE_PORT" => ENV["DISCOURSE_PORT"] || "80" }
   unicorn_pid = spawn(unicorn_env, __dir__ + "/unicorn")
   ember_cli_pid = nil
 
